@@ -93,8 +93,8 @@ def schedule_task():
 
             delay = next_time - time.time()
 
-    # 执行下一次任务
             scheduler.enter(delay, 1, schedule_task)
+            break
         except:
             time.sleep(3)
             continue
