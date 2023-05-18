@@ -1,6 +1,6 @@
 # 复旦自动刷锻脚本
 
-基于原刷锻脚本 fudan-sport-automate 包装的自动刷锻脚本。~~由于原仓库似乎消失了~~(原作者提供的新仓库：https://github.com/fsy2001/fudan-sport-automator)故提供此替代方案。  
+基于原刷锻脚本 fudan-sport-automate 包装的自动刷锻脚本。~~由于原仓库似乎消失了~~(原作者提供的新仓库：https://github.com/fsy2001/fudan-sport-automator )故提供此替代方案。  
 
 
 > 当前功能有效性尚未验证。
