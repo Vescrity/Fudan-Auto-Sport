@@ -68,6 +68,7 @@ def schedule_task():
     now = time.localtime()
     hour = now.tm_hour
     mint = now.tm_min
+    retry_time=0
     while True:
         try:
             if hour == 7 and mint<15:
@@ -96,18 +97,21 @@ def schedule_task():
             scheduler.enter(delay, 1, schedule_task)
             break
         except:
+            retry_time=retry_time+1
             time.sleep(3)
+            if (retry_time>5):
+                break
             continue
+            
 
-    # 下一次任务执行时间为明天 7 点或 16 点
 
 
 def process_command(command):
     if command.startswith("run a"):
         threading.Thread(target=task_a, daemon=True).start()
-    if command.startswith("run b"):
+    elif command.startswith("run b"):
         threading.Thread(target=task_b, daemon=True).start()
-    if command.startswith("run c"):
+    elif command.startswith("run c"):
         threading.Thread(target=task_c, daemon=True).start()
     elif command.startswith("set_t "):
         token = command[6:].strip()
